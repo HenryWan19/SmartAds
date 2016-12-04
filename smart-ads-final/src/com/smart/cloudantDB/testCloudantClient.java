@@ -28,6 +28,7 @@ public class testCloudantClient {
                 .password(password)
                 .build();
 		System.out.println("Server Version: " + client.serverVersion());
+		//System.out.println("Server Version: ");
 		
 //		List<String> databases = client.getAllDbs();
 //		System.out.println("All my databases : ");
