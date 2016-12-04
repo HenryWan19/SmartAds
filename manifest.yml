@@ -3,8 +3,8 @@ applications:
   memory: 512M
   instances: 1
   domain: mybluemix.net
-  name: SmartAds
-  host: SmartAds
+  name: smart-ads-final
+  host: smart-ads-final
   disk_quota: 1024M
   services:
-  - SmartAds-cloudantNoSQLDB
+  - smart-ads-final-cloudantNoSQLDB
