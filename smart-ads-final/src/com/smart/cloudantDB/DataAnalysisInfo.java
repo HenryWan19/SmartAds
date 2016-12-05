@@ -36,7 +36,17 @@ public class DataAnalysisInfo {
 	 */
 	public DataAnalysisInfo(String zipcode, String income, String age, String gender, String shopping_way,
 			String shopping_content) {
-		super();
+		this.zipcode = zipcode;
+		this.income = income;
+		this.age = age;
+		this.gender = gender;
+		this.shopping_way = shopping_way;
+		this.shopping_content = shopping_content;
+	}
+	
+	public DataAnalysisInfo(String id, String zipcode, String income, String age, String gender, String shopping_way,
+			String shopping_content) {
+		this._id = id;
 		this.zipcode = zipcode;
 		this.income = income;
 		this.age = age;

@@ -17,7 +17,7 @@ public class TestRandomInsert {
 		String shopping_way = "";
 		String shopping_content = ""; 
 		int i = 0;
-		int n = 100;
+		int n = 10;
 		
 		DataAnalysisInfo dataInfo = new DataAnalysisInfo(zipcode, income, age, gender, shopping_way, shopping_content);
 		DatabaseSparkOperation dbOperation = new DatabaseSparkOperation();

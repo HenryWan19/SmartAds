@@ -17,7 +17,7 @@ public interface DatabaseOperation {
 	 * @param property2
 	 * @return
 	 */
-	public ArrayList<String> select(String property1, String operation, String property2);
+	public ArrayList<DataAnalysisInfo> select(String property1, String operation, String property2);
 	
 	/**
 	 * delete an item based on the _id of the element;

@@ -15,7 +15,7 @@ public class RandomInsert {
 	
 	private String[] shopping_way = {"Online", "Offline"};
 	
-	private String[] shopping_content = {"Milk powder", "Badmin Racket", "Apple Mac", "Orange Juice"};
+	private String[] shopping_content = {"Milk powder", "Badmin Racket", "Apple MacPro", "Orange Juice"};
 	
 	private String[] gender = {"male", "female"};
 	
