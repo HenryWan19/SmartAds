@@ -51,7 +51,7 @@ public class testCloudantClient {
 		db.save(cf4);
 		System.out.println("You have inserted the document");
 		
-		String search_zipcode = "95123";
+		String search_zipcode = "95189";
 		String indexString = "{\n" +
                 "  \"index\": {\n" +
                 "    \"fields\": [\n" +
@@ -79,11 +79,7 @@ public class testCloudantClient {
 //                "    }\n" +
 //                "  ]\n" +
 //                "}\n";
-//		String selectorJson = "\"selector\": {\n" +           
-//                "    \"zipcode\": {\n" +
-//                "      \"$eq\": " + search_zipcode + "\n" +
-//                "    }\n" +
-//                "  }";
+		String selectorJson = "\"selector\": { \"zipcode\": {\"$lt\": \"" + search_zipcode + "\"}}";                  
 //        FindByIndexOptions findOptions = new FindByIndexOptions();
 //        findOptions.sort(new IndexField("zipcode", SortOrder.asc));
         String field0 = "name";
@@ -91,7 +87,7 @@ public class testCloudantClient {
         String field2 = "address";
         String field3 = "income";
         String id = "_id";
-        String selectorJson = "	\"selector\": { \"zipcode\": \"" + search_zipcode + "\"}"; 
+//        String selectorJson = "	\"selector\": { \"zipcode\": \"" + search_zipcode + "\"}"; 
 		List<Customer_Information> resultCustomer = 
 				db.findByIndex(selectorJson, Customer_Information.class, new FindByIndexOptions()
 						.sort(new IndexField("zipcode", SortOrder.asc))

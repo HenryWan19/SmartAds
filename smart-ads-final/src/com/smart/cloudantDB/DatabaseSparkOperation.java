@@ -91,10 +91,72 @@ public class DatabaseSparkOperation implements DatabaseOperation{
 			}
 		}
 		else if (operation.equals("gt") == true) {
-			;
+			String selectorJson = "\"selector\": {\"" + property1 + "\": {\"$gt\": \"" + property2 + "\"}}";
+			List<DataAnalysisInfo> resultQuery = 
+					db.findByIndex(selectorJson, DataAnalysisInfo.class, new FindByIndexOptions()
+							.sort(new IndexField("zipcode", SortOrder.asc))
+							.fields(id).fields(field0).fields(field1).fields(field2).fields(field3).fields(field4).fields(field5));
+			if (resultQuery.size() == 0 || resultQuery == null) {
+				System.out.println("resultQuery is enpty!");
+				return null;
+			}
+			else {
+				for (DataAnalysisInfo dai : resultQuery) {
+					arrayList.add(dai.toString());
+				}
+				return arrayList;
+			}
 		}
-		else if (operation.equals("ls") == true) {
-			;
+		else if (operation.equals("lt") == true) {
+			String selectorJson = "\"selector\": {\"" + property1 + "\": {\"$lt\": \"" + property2 + "\"}}";
+			List<DataAnalysisInfo> resultQuery = 
+					db.findByIndex(selectorJson, DataAnalysisInfo.class, new FindByIndexOptions()
+							.sort(new IndexField("zipcode", SortOrder.asc))
+							.fields(id).fields(field0).fields(field1).fields(field2).fields(field3).fields(field4).fields(field5));
+			if (resultQuery.size() == 0 || resultQuery == null) {
+				System.out.println("resultQuery is enpty!");
+				return null;
+			}
+			else {
+				for (DataAnalysisInfo dai : resultQuery) {
+					arrayList.add(dai.toString());
+				}
+				return arrayList;
+			}
+		}
+		else if (operation.equals("gte") == true) {
+			String selectorJson = "\"selector\": {\"" + property1 + "\": {\"$gte\": \"" + property2 + "\"}}";
+			List<DataAnalysisInfo> resultQuery = 
+					db.findByIndex(selectorJson, DataAnalysisInfo.class, new FindByIndexOptions()
+							.sort(new IndexField("zipcode", SortOrder.asc))
+							.fields(id).fields(field0).fields(field1).fields(field2).fields(field3).fields(field4).fields(field5));
+			if (resultQuery.size() == 0 || resultQuery == null) {
+				System.out.println("resultQuery is enpty!");
+				return null;
+			}
+			else {
+				for (DataAnalysisInfo dai : resultQuery) {
+					arrayList.add(dai.toString());
+				}
+				return arrayList;
+			}
+		}
+		else if (operation.equals("lte") == true) {
+			String selectorJson = "\"selector\": {\"" + property1 + "\": {\"$lte\": \"" + property2 + "\"}}";
+			List<DataAnalysisInfo> resultQuery = 
+					db.findByIndex(selectorJson, DataAnalysisInfo.class, new FindByIndexOptions()
+							.sort(new IndexField("zipcode", SortOrder.asc))
+							.fields(id).fields(field0).fields(field1).fields(field2).fields(field3).fields(field4).fields(field5));
+			if (resultQuery.size() == 0 || resultQuery == null) {
+				System.out.println("resultQuery is enpty!");
+				return null;
+			}
+			else {
+				for (DataAnalysisInfo dai : resultQuery) {
+					arrayList.add(dai.toString());
+				}
+				return arrayList;
+			}
 		}
 		else {
 			;
