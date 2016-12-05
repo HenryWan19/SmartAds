@@ -28,7 +28,7 @@ public class TestGaussianInsert {
 			case 0: 
 				{
 					ArrayList<DataAnalysisInfo> tempList = new ArrayList<DataAnalysisInfo>();
-					int miu = 107493, sithe = 100000;
+					int miu = 107493, sithe = 10;
 					tempList = gaussianInsert.getGaussianIncome(list, miu, sithe);
 					list = tempList;
 					tempList = gaussianInsert.getRatioShoppingContent(list, 40, 20, 20, 20);
@@ -63,7 +63,7 @@ public class TestGaussianInsert {
 			case 1: 
 				{
 					ArrayList<DataAnalysisInfo> tempList = new ArrayList<DataAnalysisInfo>();
-					int miu = 72459, sithe = 100000;
+					int miu = 72459, sithe = 10;
 					tempList = gaussianInsert.getGaussianIncome(list, miu, sithe);
 					list = tempList;
 					tempList = gaussianInsert.getGaussianShoppingContent(list, 3, 1);
@@ -98,7 +98,7 @@ public class TestGaussianInsert {
 			case 2: 
 				{
 					ArrayList<DataAnalysisInfo> tempList = new ArrayList<DataAnalysisInfo>();
-					int miu = 49454, sithe = 100000;
+					int miu = 49454, sithe = 10;
 					tempList = gaussianInsert.getGaussianIncome(list, miu, sithe);
 					list = tempList;
 					tempList = gaussianInsert.getGaussianShoppingContent(list, 3, 1);
@@ -133,7 +133,7 @@ public class TestGaussianInsert {
 			case 3: 
 				{
 					ArrayList<DataAnalysisInfo> tempList = new ArrayList<DataAnalysisInfo>();
-					int miu = 90881, sithe = 100000;
+					int miu = 90881, sithe = 10;
 					tempList = gaussianInsert.getGaussianIncome(list, miu, sithe);
 					list = tempList;
 					tempList = gaussianInsert.getRatioShoppingContent(list, 20, 50, 20, 10);
@@ -168,7 +168,7 @@ public class TestGaussianInsert {
 			case 4: 
 				{
 					ArrayList<DataAnalysisInfo> tempList = new ArrayList<DataAnalysisInfo>();
-					int miu = 236912, sithe = 100000;
+					int miu = 236912, sithe = 10;
 					tempList = gaussianInsert.getGaussianIncome(list, miu, sithe);
 					list = tempList;
 					tempList = gaussianInsert.getGaussianShoppingContent(list, 0, 1);
@@ -203,7 +203,7 @@ public class TestGaussianInsert {
 			case 5: 
 				{
 					ArrayList<DataAnalysisInfo> tempList = new ArrayList<DataAnalysisInfo>();
-					int miu = 228587, sithe = 100000;
+					int miu = 228587, sithe = 10;
 					tempList = gaussianInsert.getGaussianIncome(list, miu, sithe);
 					list = tempList;
 					tempList = gaussianInsert.getGaussianShoppingContent(list, 1, 1);
@@ -238,7 +238,7 @@ public class TestGaussianInsert {
 			case 6: 
 				{
 					ArrayList<DataAnalysisInfo> tempList = new ArrayList<DataAnalysisInfo>();
-					int miu = 107493, sithe = 100000;
+					int miu = 107493, sithe = 10;
 					tempList = gaussianInsert.getGaussianIncome(list, miu, sithe);
 					list = tempList;
 					tempList = gaussianInsert.getGaussianShoppingContent(list, 2, 1);
@@ -273,7 +273,7 @@ public class TestGaussianInsert {
 			case 7: 
 				{
 					ArrayList<DataAnalysisInfo> tempList = new ArrayList<DataAnalysisInfo>();
-					int miu = 29197, sithe = 100000;
+					int miu = 29197, sithe = 10;
 					tempList = gaussianInsert.getGaussianIncome(list, miu, sithe);
 					list = tempList;
 					tempList = gaussianInsert.getGaussianShoppingContent(list, 3, 1);

@@ -65,7 +65,7 @@ public class GaussianInsert {
 	 * @param list
 	 * @return
 	 */
-	public ArrayList<DataAnalysisInfo> getRandomGender(ArrayList<DataAnalysisInfo> list) {
+	public ArrayList<DataAnalysisInfo> getRandomShoppingWay(ArrayList<DataAnalysisInfo> list) {
 		Random random  = new Random();		
 		int n = list.size();
 		for (int i = 0; i < n; i++) {
@@ -79,13 +79,13 @@ public class GaussianInsert {
 		Random random  = new Random();
 		int n = list.size();
 		for (int i = 0; i < n; i++) {
-			int temp = random.nextInt(100);
+			int temp = random.nextInt(60);
 			list.get(i).setAge(String.valueOf(temp));
 		}
 		return list;
 	}
 	
-	public ArrayList<DataAnalysisInfo> getRandomShoppingWay(ArrayList<DataAnalysisInfo> list) {
+	public ArrayList<DataAnalysisInfo> getRandomGender(ArrayList<DataAnalysisInfo> list) {
 		Random random  = new Random();
 		int n = list.size();
 		for (int i = 0; i < n; i++) {
