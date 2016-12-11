@@ -49,14 +49,14 @@ public class DatabaseSparkOperation implements DatabaseOperation{
 	}
 	
 	@Override
-	public void insert(ArrayList<String> list) {
+	public void insert(ArrayList list) {
 		// TODO Auto-generated method stub
-		String zipcode = list.get(0);
-		String income = list.get(1);
-		String age = list.get(2);
-		String gender = list.get(3);
-		String shopping_way = list.get(4);
-		String shopping_content = list.get(5);
+		String zipcode = (String) list.get(0);
+		String income = (String) list.get(1);
+		String age = (String) list.get(2);
+		String gender = (String) list.get(3);
+		String shopping_way = (String) list.get(4);
+		String shopping_content = (String) list.get(5);
 		sparkInfo.setZipcode(zipcode);
 		sparkInfo.setIncome(income);
 		sparkInfo.setAge(age);
