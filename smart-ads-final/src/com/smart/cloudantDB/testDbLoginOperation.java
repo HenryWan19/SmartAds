@@ -8,12 +8,15 @@ import org.junit.Test;
 
 public class testDbLoginOperation {
 
-	@Test
-	public void testIndex() {
-		DatabaseLoginOperation dbOperation = new DatabaseLoginOperation();
-		String indexField = "username";
-		dbOperation.createIndex(indexField);
-	}
+//	@Test
+//	public void testIndex() {
+//		DatabaseLoginOperation dbOperation = new DatabaseLoginOperation();
+//		String indexField0 = "username";
+//		String indexField1 = "email";
+//		
+//		dbOperation.createIndex(indexField0);
+//		dbOperation.createIndex(indexField1);
+//	}
 	
 	@Test
 	public void testOperation() {
@@ -33,9 +36,19 @@ public class testDbLoginOperation {
 		dbOperation.insert(list);
 		list.clear();
 		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		assertTrue(dbOperation.containUserName("Baidu"));
 		assertTrue(dbOperation.containUserName("Google"));
 		assertFalse(dbOperation.containUserName("Yahoo"));
+		
+//		assertTrue(dbOperation.containEmail("emma@gmail.com"));
+//		assertFalse(dbOperation.containEmail("emmaemma@gmail.com"));
 		
 		assertTrue(dbOperation.matchUserPassword("Baidu", "1234"));
 		assertFalse(dbOperation.matchUserPassword("Google", "43210"));

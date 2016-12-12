@@ -30,27 +30,27 @@ public class testDbSparkOperation {
 	@Test
 	public void testQueryEq() {
 		DatabaseSparkOperation dbOperation = new DatabaseSparkOperation();
-		ArrayList<DataAnalysisInfo> resultQuary = dbOperation.select("zipcode", "eq", "94027");
+		ArrayList<DataAnalysisInfo> resultQuary = dbOperation.select("zipcode", "eq", "95113");
 		for (DataAnalysisInfo str: resultQuary) {
 			System.out.println(str);
 		}
 	}
 	
-	@Test
-	public void testQueryLt() {
-		DatabaseSparkOperation dbOperation = new DatabaseSparkOperation();
-		ArrayList<DataAnalysisInfo> resultQuary = dbOperation.select("zipcode", "lt", "95123");
-		for (DataAnalysisInfo str: resultQuary) {
-			System.out.println(str);
-		}
-	}
-	
-	@Test
-	public void testQueryGt() {
-		DatabaseSparkOperation dbOperation = new DatabaseSparkOperation();
-		ArrayList<DataAnalysisInfo> resultQuary = dbOperation.select("zipcode", "gt", "95123");
-		for (DataAnalysisInfo str: resultQuary) {
-			System.out.println(str);
-		}
-	}
+//	@Test
+//	public void testQueryLt() {
+//		DatabaseSparkOperation dbOperation = new DatabaseSparkOperation();
+//		ArrayList<DataAnalysisInfo> resultQuary = dbOperation.select("zipcode", "lt", "95123");
+//		for (DataAnalysisInfo str: resultQuary) {
+//			System.out.println(str);
+//		}
+//	}
+//	
+//	@Test
+//	public void testQueryGt() {
+//		DatabaseSparkOperation dbOperation = new DatabaseSparkOperation();
+//		ArrayList<DataAnalysisInfo> resultQuary = dbOperation.select("zipcode", "gt", "95123");
+//		for (DataAnalysisInfo str: resultQuary) {
+//			System.out.println(str);
+//		}
+//	}
 }

@@ -98,7 +98,7 @@ public class DatabaseLoginOperation implements DatabaseOperation{
 							.sort(new IndexField("username", SortOrder.asc))
 							.fields(id).fields(field0).fields(field1).fields(field2).fields(field3));
 			if (resultQuery.size() == 0 || resultQuery == null) {
-				System.out.println("resultQuery is enpty!");
+				System.out.println("resultQuery is empty!");
 				return null;
 			}
 			else {
@@ -115,7 +115,7 @@ public class DatabaseLoginOperation implements DatabaseOperation{
 							.sort(new IndexField("username", SortOrder.asc))
 							.fields(id).fields(field0).fields(field1).fields(field2).fields(field3));
 			if (resultQuery.size() == 0 || resultQuery == null) {
-				System.out.println("resultQuery is enpty!");
+				System.out.println("resultQuery is empty!");
 				return null;
 			}
 			else {
@@ -132,7 +132,7 @@ public class DatabaseLoginOperation implements DatabaseOperation{
 							.sort(new IndexField("username", SortOrder.asc))
 							.fields(id).fields(field0).fields(field1).fields(field2).fields(field3));
 			if (resultQuery.size() == 0 || resultQuery == null) {
-				System.out.println("resultQuery is enpty!");
+				System.out.println("resultQuery is empty!");
 				return null;
 			}
 			else {
@@ -149,7 +149,7 @@ public class DatabaseLoginOperation implements DatabaseOperation{
 							.sort(new IndexField("username", SortOrder.asc))
 							.fields(id).fields(field0).fields(field1).fields(field2).fields(field3));
 			if (resultQuery.size() == 0 || resultQuery == null) {
-				System.out.println("resultQuery is enpty!");
+				System.out.println("resultQuery is empty!");
 				return null;
 			}
 			else {
@@ -166,7 +166,7 @@ public class DatabaseLoginOperation implements DatabaseOperation{
 							.sort(new IndexField("username", SortOrder.asc))
 							.fields(id).fields(field0).fields(field1).fields(field2).fields(field3));
 			if (resultQuery.size() == 0 || resultQuery == null) {
-				System.out.println("resultQuery is enpty!");
+				System.out.println("resultQuery is empty!");
 				return null;
 			}
 			else {
@@ -211,6 +211,26 @@ public class DatabaseLoginOperation implements DatabaseOperation{
 	 */
 	public boolean containUserName(String signUp_username) {
 		ArrayList<LoginInfo> listInfo = select("username", "eq", signUp_username);
+		if (listInfo == null || listInfo.size() == 0) {
+			return false;
+		}
+		if (listInfo.size() == 1) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	/**
+	 * Find whether the email address is already in the database.
+	 * @param signUp_username
+	 * @return true: the email has already been used by others
+	 */
+	public boolean containEmail(String singUp_email) {
+		ArrayList<LoginInfo> listInfo = select("email", "eq", singUp_email);
+		System.out.println(listInfo);
+
 		if (listInfo == null || listInfo.size() == 0) {
 			return false;
 		}
